@@ -5,7 +5,7 @@
 First of all, `MADE` is not a tool. It's a method/technique to manage and test your microservices in a reproducible and reliable way. 
 Basically it is made for LOCAL develepment. But if you have a `docker-compose` capable CI/CD pipeline you could even use the same approach to deploy your apps to staging or production.  
 
-_Scenario_: Imagine you have a microservice architecture with a frontend (e.g. Ract/Angular), 
+_Scenario_: Imagine you have a microservice architecture with a frontend (e.g. React/Angular), 
 backend (Kotlin, Python, Java, ...), a database (Mongo, PostgreSQL, ...) and other third-party services (i.e. ElasticSearch, KeyCloak for AAA).
 Maybe you also have some automated integration and/or system-tests.
 
@@ -52,6 +52,11 @@ The tests are managed in a separate gitsubmodule which also includes a Dockerfil
 
 In this microservice we manage the tests which you can write in any language and with any framework you want. 
 We have used  [behave](https://behave.readthedocs.io/en/latest/) (BDD tests) and for automated UI tests we used [Cypress](https://www.cypress.io/). But feel free use whatever you like!
+
+### Managing secrets in MADE
+To avoid comitting/pushing secrets, such as passwords or api-keys, to `git` we use the `env` folder approach. 
+That means we have a folder `made/env` which is ignored by `git` (see .gitignore). 
+In that folder we store the secrets in special .env-files which are used then by `docker-compose`.
 
 ## Working with MADE
 

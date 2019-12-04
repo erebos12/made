@@ -53,8 +53,11 @@ The tests are managed in a separate gitsubmodule which also includes a Dockerfil
 In this microservice we manage the tests which you can write in any language and with any framework you want. 
 We have used  [behave](https://behave.readthedocs.io/en/latest/) (BDD tests) and for automated UI tests we used [Cypress](https://www.cypress.io/). But feel free use whatever you like!
 
-### Managing secrets in MADE
-To avoid comitting/pushing secrets, such as passwords or api-keys, to `git` we use the `env` folder approach. 
+### Managing secrets in MADE (optionally)
+One specific requirement we had in the past, was that we also wanted to access from local running apps to remote databases in our clouds (i.e. GCloud).
+For that you need to store the secrets, such as passwords or api-keys, somehow.
+
+To avoid comitting/pushing those secrets to `git` we use the `env` folder approach. 
 That means we have a folder `made/env` which is ignored by `git` (see .gitignore). 
 In that folder we store the secrets in special .env-files which are used then by `docker-compose`.
 

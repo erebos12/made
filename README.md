@@ -35,6 +35,8 @@ The core of `MADE` is `git`, `docker` and `docker-compose`, as mentioned before.
 
 * With `git` you can manage the versions of your apps. You can checkout any commit you want i.e. frontend has feature-branch X, backend has master-branch etc.. 
 By that you can create any combination of your apps very fast and easily. 
+    * Here we use `git submodules`. A git submodule is just a reference to another git repo. 
+    Since all your apps should already have a separate git repo, we can leverage that!
 * `docker` (of course ;-) ) is needed to build and package your apps into docker images. 
 Same images will be deployed to your production/staging environment (ie. GoogleCloud, MS Azure) since your CI/CD pipeline SHOULD use the same Dockerfile.
 * `docker-compose` gives us a tool to compose and configure the microservice environment. We will also use it to include and start the automated tests. 

@@ -46,7 +46,7 @@ Since we can setup our entire microservice environment locally, we can also exec
 The tests are managed in a separate gitsubmodule which also includes a Dockerfile. So its treated a normal microservice/app.
 
 In this microservice we manage the tests which you can write in any language and with any framework you want. 
-We use the BDD approach with the Python BDD framework `behave` and for UI tests we used `Cypress`. But feel free use whatever you like!
+We have used  [behave](https://behave.readthedocs.io/en/latest/) (BDD tests) and for automated UI tests we used [Cypress](https://www.cypress.io/). But feel free use whatever you like!
 
 ## Working with MADE
 
@@ -55,7 +55,7 @@ We use the BDD approach with the Python BDD framework `behave` and for UI tests 
 git clone --recursive git@gitlab.pwc.delivery:fs-acc-devops/platform_blueprint.git
 ```
 
-### Create your own git repo of platform
+### Create your own git repo of MADE
 Remove `.git` folder because this is the git repo for this blueprint. 
 I guess you wanna create your own platform repo ;-).
 ```
@@ -63,7 +63,7 @@ $ rm -rf .git
 $ git init
 ```
 
-### Adding a git submodule (microserice)
+### Adding a git submodule (microserice/app)
 
 You add a new gitsubmodule, in other words another git-repo, just execute in MADE root-folder:
 ```

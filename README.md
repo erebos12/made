@@ -61,6 +61,24 @@ To avoid comitting/pushing those secrets to `git` we use the `env` folder approa
 That means we have a folder `made/env` which is ignored by `git` (see .gitignore). 
 In that folder we store the secrets in special .env-files which are used then by `docker-compose`.
 
+## Alternative approaches for MADE
+
+## Monorepo instead of git-submodules
+We tried also to leverage the `Monotepo` approach. That means, you have just one git-repo for all apps (so each has a subfolder then).
+The problem we faced was that `GitLab` doesn't support Monorepos by default. 
+`GitLab` must be able to build out of each subfolder then a separate docker image and deploy this to our staging/production cluster.
+Unfortunately this doesn't work in `GitLab`. Maybe they will come up with a future version which supports also `Monorepos`.
+
+## Using docker-images instead git-submodules
+Another approach is to use directly docker images in the `docker-compose` instead of git submodules. 
+So you specify directly the image name and pull it from the docker registry then.
+
+Drawback: 
+* You always need to trigger the CI/CD pipeline, so that the docker image is build. That takes time and requires an internet connection.
+* Another problem is that you need to create specific tags for docker images which refers then to specific docker test image. 
+You also need to maintain these tags in your docker-compose.
+* When you test with many different docker test images, you will need more space in the registry and maybe also some house-keeping.
+* More pipeline jobs will be triggered which produced more load on your CI/CD pipeline.
 ## Working with MADE
 
 ### Clone me

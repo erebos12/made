@@ -2,7 +2,10 @@
 
 ## What is MADE ?
 
-Imagine you have a microservice architecture with a frontend (e.g. Ract/Angular), 
+First of all, `MADE` is not a tool. It's a method/technique to manage and test your microservices in a reproducible and reliable way. 
+Basically it is made for LOCAL develepment. But if you have a `docker-compose` capable CI/CD pipeline you could even use the same approach to deploy your apps to staging or production.  
+
+_Scenario_: Imagine you have a microservice architecture with a frontend (e.g. Ract/Angular), 
 backend (Kotlin, Python, Java, ...), a database (Mongo, PostgreSQL, ...) and other third-party services (i.e. ElasticSearch, KeyCloak for AAA).
 Maybe you also have some automated integration and/or system-tests.
 

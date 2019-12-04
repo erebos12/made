@@ -15,7 +15,7 @@ Here comes `MADE` into play!
 The idea is:
 
 1. Manage source-code of all required microservices - `using git (specifically git-submodules)`
-2. Build all apps (with Docker, of couse ;-) ) - `using Docker`
+2. Build all apps - `using Docker`
 3. Compose, configure, start and run all apps and tests in a reproducible and reliable way - `using Docker-Compose`
 
 Other requirements developers may have:
@@ -24,7 +24,7 @@ Other requirements developers may have:
 3. Developers want to be able to test against "incomplete" features/code. Imagine backend API changes and the frontend developer wants to code against this new API in a very early stage.
 4. No central test environments (like test-clusters in the cloud) which you need to share with other developers. Error-Prone and many conflicts are related to that.
 
-All this will be covered by the MADE!
+All this will be covered by MADE!
 
 ## Prerequisites
 
@@ -46,7 +46,7 @@ Same images will be deployed to your production/staging environment (ie. GoogleC
 ### Automated tests
 
 Since we can setup our entire microservice environment locally, we can also execute tests against this environment, in best case automated tests. 
-The tests are managed in a separate gitsubmodule which also includes a Dockerfile. So its treated a normal microservice/app.
+The tests are managed in a separate gitsubmodule which also includes a Dockerfile. So its treated as ordinary microservice/app.
 
 In this microservice we manage the tests which you can write in any language and with any framework you want. 
 We have used  [behave](https://behave.readthedocs.io/en/latest/) (BDD tests) and for automated UI tests we used [Cypress](https://www.cypress.io/). But feel free use whatever you like!

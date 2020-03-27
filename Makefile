@@ -28,4 +28,12 @@ local: kill ## just start all components locally
 test: kill ## running tests with all components locally
 	 docker-compose -f docker-compose-local.yaml build
 	 docker-compose -f docker-compose-local.yaml run test 
+	 
+cos: ## git checkout staging for all submodules
+	 git checkout -B staging origin/staging
+	 git submodule update
+
+com: ## git checkout master for all submodules
+	 git checkout -B master origin/master
+	 git submodule update
 

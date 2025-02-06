@@ -14,7 +14,7 @@ Here comes `MADE` into play!
 
 The idea is:
 
-1. Manage source-code of all required microservices - `using git (specifically git-submodules)`
+1. Manage source-code of all required microservices - `using git`
 2. Build all apps - `using Docker`
 3. Compose, configure, start and run all apps and tests in a reproducible and reliable way - `using Docker-Compose`
 

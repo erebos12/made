@@ -1,4 +1,4 @@
-# Blueprint MADE - (M)icroservice Test (A)nd (D)evelopment (E)nvironment
+#  MADE - (M)icroservice Test (A)nd (D)evelopment (E)nvironment
 
 ## What is MADE ?
 

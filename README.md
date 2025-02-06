@@ -64,10 +64,8 @@ In that folder we store the secrets in special .env-files which are used then by
 ## Alternative approaches for MADE
 
 ## Monorepo instead of git-submodules
-We tried also to leverage the `Monotepo` approach. That means, you have just one git-repo for all apps (so each has a subfolder then).
-The problem we faced was that `GitLab` doesn't support Monorepos by default. 
-`GitLab` must be able to build out of each subfolder then a separate docker image and deploy this to our staging/production cluster.
-Unfortunately this doesn't work in `GitLab`. Maybe they will come up with a future version which supports also `Monorepos`.
+Instead of using `gitsubmodules` you can also apply the `Monorepo` approach. This is a bit easier because you don't have to struggle with `git submodules` which can be cumbersome sometimes.
+
 
 ## Using docker-images instead git-submodules
 Another approach is to use directly docker images in the `docker-compose` instead of git submodules. 

@@ -77,29 +77,3 @@ Drawback:
 You also need to maintain these tags in your docker-compose.
 * When you test with many different docker test images, you will need more space in the registry and maybe also some house-keeping.
 * More pipeline jobs will be triggered which produced more load on your CI/CD pipeline.
-## Working with MADE
-
-### Clone me
-```
-git clone --recursive git@gitlab.pwc.delivery:fs-acc-devops/platform_blueprint.git
-```
-
-### Create your own git repo of MADE
-Remove `.git` folder because this is the git repo for this blueprint. 
-I guess you wanna create your own platform repo ;-).
-```
-$ rm -rf .git
-$ git init
-```
-
-### Adding a git submodule (microserice/app)
-
-You add a new gitsubmodule, in other words another git-repo, just execute in MADE root-folder:
-```
-~made$ git submodule add git@gitlab.pwc.delivery:/awsome_app.git
-```
-After that you can execute:
-```
-~made$ git submodule
-5201ad9806d8f9d4d18ff296dcb433f86bf7c5c4 awsome_app (heads/master)
-```

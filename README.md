@@ -2,29 +2,42 @@
 
 ## What is MADE ?
 
-First of all, `MADE` is not a tool. It's a method/technique to manage and test your microservices in a reproducible and reliable way. 
-Basically it is made for LOCAL develepment and testing (mostly functional tests). But if you have a `docker-compose` capable CI/CD pipeline you could even use the same approach to deploy your apps to staging or production.  
 
-_Scenario_: Imagine you have a microservice architecture with a frontend (e.g. React/Angular), 
-backend (Kotlin, Python, Java, ...), a database (Mongo, PostgreSQL, ...) and other third-party services (i.e. ElasticSearch, KeyCloak for AAA).
-Maybe you also have some automated integration and/or system-tests.
+First of all, MADE is not a tool. It is a method or technique designed to manage and test your microservices in a reproducible and reliable way. MADE is primarily intended for **local** development and testing (mainly functional tests). However, if your CI/CD pipeline supports **Docker Compose**, you can even apply the same approach to deploy your applications to **staging** or **production**.  
 
-How can you then configure, run, test and maintain all these apps in a composed environment?
-Here comes `MADE` into play!
+---
 
-The idea is:
+### **Scenario:**  
+Imagine you have a microservice-based architecture consisting of:  
+- A **frontend** (e.g., React, Angular)  
+- A **backend** (e.g., Kotlin, Python, Java, etc.)  
+- A **database** (e.g., MongoDB, PostgreSQL)  
+- Additional **third-party services** (e.g., Elasticsearch, Keycloak for authentication & authorization)  
+- Automated **integration and/or system tests**  
 
-1. Manage source-code of all required microservices - `using git`
-2. Build all apps - `using Docker`
-3. Compose, configure, start and run all apps and tests in a reproducible and reliable way - `using Docker-Compose`
+Managing, configuring, running, testing, and maintaining all these applications in a **composed environment** can be challenging. This is where **MADE** comes into play!  
 
-Other requirements developers may have:
-1. Develop locally and independently on your machine. So no permanent internet connection required. Especially useful when you are sitting in the train (Greetz to DB ;-))
-2. Setup for tests must be reliable and reproducible. When its working for one developer then it must also work for any other developer!
-3. Developers want to be able to test against "incomplete" features/code. Imagine backend API changes and the frontend developer wants to code against this new API in a very early stage.
-4. No central test environments (like test-clusters in the cloud) which you need to share with other developers. Error-Prone and many conflicts are related to that.
+---
 
-All this will be covered by MADE!
+### **The Concept of MADE:**  
+1. **Manage the source code** of all required microservices – using **Git**  
+2. **Build all applications** – using **Docker**  
+3. **Compose, configure, start, and run** all applications and tests in a reproducible and reliable way – using **Docker Compose**  
+
+---
+
+### **Key Developer Requirements:**  
+✔ **Local and independent development:** Work entirely on your machine without requiring a **constant internet connection**—especially useful when coding on the go (Shoutout to DB 😉).  
+
+✔ **Reliable and reproducible test setups:** If it works for one developer, it must work for everyone else as well.  
+
+✔ **Early-stage testing of incomplete features:** Developers should be able to **test against partially implemented code**. For example, if the backend API is changing, frontend developers should still be able to start working against the new API as early as possible.  
+
+✔ **No reliance on central test environments:** No need for **shared cloud test clusters** that often cause conflicts and errors due to multiple developers working on them simultaneously.  
+
+---
+
+### **With MADE, all these challenges are addressed!**
 
 ## Prerequisites
 

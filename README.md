@@ -37,7 +37,7 @@ Managing, configuring, running, testing, and maintaining all these applications 
 
 ---
 
-### **With MADE, all these challenges are addressed!**
+**With MADE, all these challenges are addressed!**
 
 ## Prerequisites
 

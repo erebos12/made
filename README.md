@@ -3,7 +3,7 @@
 ## What is MADE ?
 
 First of all, `MADE` is not a tool. It's a method/technique to manage and test your microservices in a reproducible and reliable way. 
-Basically it is made for LOCAL develepment. But if you have a `docker-compose` capable CI/CD pipeline you could even use the same approach to deploy your apps to staging or production.  
+Basically it is made for LOCAL develepment and testing (mostly functional tests). But if you have a `docker-compose` capable CI/CD pipeline you could even use the same approach to deploy your apps to staging or production.  
 
 _Scenario_: Imagine you have a microservice architecture with a frontend (e.g. React/Angular), 
 backend (Kotlin, Python, Java, ...), a database (Mongo, PostgreSQL, ...) and other third-party services (i.e. ElasticSearch, KeyCloak for AAA).
@@ -38,7 +38,7 @@ By that you can create any combination of your apps very fast and easily.
     * Here we use `git submodules`. A git submodule is just a reference to another git repo. 
     Since all your apps should already have a separate git repo, we can leverage that! In case you use a monorepo, the approach stays the same except that a submodule is now a folder in your monorepo.
 * `docker` (of course ;-) ) is needed to build and package your apps into docker images. 
-Same images will be deployed to your production/staging environment (ie. GoogleCloud, MS Azure) since your CI/CD pipeline SHOULD use the same Dockerfile.
+Same images will be deployed to your production/staging environment (ie. GoogleCloud, MS Azure) since your CI/CD pipeline SHOULD use the same Dockerfile. By that you test locally the same image which will be deployed to production later.
 * `docker-compose` gives us a tool to compose and configure the microservice environment. We will also use it to include and start the automated tests. 
 
 <table><tr><td>

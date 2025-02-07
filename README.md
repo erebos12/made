@@ -46,13 +46,39 @@ All you need is `git`, `docker` and `docker-compose`.
 ## Overview / Structure
 The core of `MADE` is `git`, `docker` and `docker-compose`, as mentioned before.
 
-* With `git` you can manage the versions of your apps. You can checkout any commit you want i.e. frontend has feature-branch X, backend has master-branch etc.. 
-By that you can create any combination of your apps very fast and easily. 
-    * Here we use `git submodules`. A git submodule is just a reference to another git repo. 
-    Since all your apps should already have a separate git repo, we can leverage that! In case you use a monorepo, the approach stays the same except that a submodule is now a folder in your monorepo.
-* `docker` (of course ;-) ) is needed to build and package your apps into docker images. 
-Same images will be deployed to your production/staging environment (ie. GoogleCloud, MS Azure) since your CI/CD pipeline SHOULD use the same Dockerfile. By that you test locally the same image which will be deployed to production later.
-* `docker-compose` gives us a tool to compose and configure the microservice environment. We will also use it to include and start the automated tests. 
+Here is your text rewritten in better English while maintaining the structure:
+
+---
+
+### **The Core of MADE: Git, Docker, and Docker Compose**  
+
+As previously mentioned, the foundation of **MADE** is built on **Git**, **Docker**, and **Docker Compose**.  
+
+#### **Git – Version Control and Flexible App Combinations**  
+- With **Git**, you can manage different versions of your applications effortlessly. You can **checkout any commit**, for example:  
+  - The frontend is on **feature branch X**,  
+  - The backend is on the **main branch**, etc.  
+- This allows you to create and test **any combination** of your applications **quickly and easily**.  
+
+✅ **Using Git Submodules**  
+- A **Git submodule** is simply a reference to another Git repository.  
+- Since each of your microservices likely has its **own separate Git repository**, you can leverage submodules to link them together.  
+- If you're using a **monorepo**, the concept remains the same—except that instead of submodules, different microservices reside in **separate folders** within your monorepo.  
+
+---
+
+#### **Docker – Building and Packaging Applications**  
+- **Docker** is essential for **building and packaging** your applications into **Docker images**.  
+- The **same Docker images** used for local development will also be deployed to **staging** and **production** environments (e.g., **Google Cloud, Microsoft Azure**).  
+- Your **CI/CD pipeline should always use the same Dockerfile**, ensuring that the **exact same image** tested locally is deployed to production.  
+
+---
+
+#### **Docker Compose – Microservice Orchestration and Automated Testing**  
+- **Docker Compose** is used to **define, configure, and run** your entire microservice environment in a structured way.  
+- It also enables you to include and start **automated tests** within the composed environment.  
+
+With this approach, you ensure that **your local development setup closely mirrors the production environment**, making debugging and testing far more effective.
 
 <table><tr><td>
 <img align="center" src="./docs/pics/overview_it_platform.png" width="800">
